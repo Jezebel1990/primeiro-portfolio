@@ -20,9 +20,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/", router);
 // app.listen(5000, () => console.log("Server Running"));
-app.listen(process.env.PORT || 3000, (err) => {
-  if (err) { return console.log(err) }
-  console.log('Tudo funcionando certinho')
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${ PORT }`);
 })
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
