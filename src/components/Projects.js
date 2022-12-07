@@ -10,16 +10,19 @@ import TrackVisibility from 'react-on-screen';
 export const Projects = () => {
 
   const projects = [
+
+
     {
       title: "E-commerce Website",
       description: "Design & Desenvolvimento",
       imgUrl: projImg1,
-      src: "https://hw-tshirts.netlify.app/home"
+      link:"https://hw-tshirts.netlify.app",
     },
     {
       title: "Rede Social",
       description: "Design & Desenvolvimento",
       imgUrl: projImg2,
+      link:"https://alurakut-blond-psi.vercel.app/login",
     },
     // {
     //   title: "Aplicativo",
@@ -41,8 +44,24 @@ export const Projects = () => {
     //   description: "Design & Development",
     //   imgUrl: projImg3,
     // },
+    
   ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   return (
     <section className="project" id="project">
       <Container>
@@ -81,6 +100,7 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
+                      
                       <p>Em Breve</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
