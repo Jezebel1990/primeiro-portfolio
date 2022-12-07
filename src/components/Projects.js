@@ -2,10 +2,14 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
-// import projImg3 from "../assets/img/project-img3.png";
+import projImg3 from "../assets/img/project-img3.png";
+import projImg4 from "../assets/img/project-img4.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 export const Projects = () => {
 
@@ -49,18 +53,6 @@ export const Projects = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   
   return (
     <section className="project" id="project">
@@ -99,15 +91,28 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                      
-                      <p>Em Breve</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Em Breve</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
+      <Tab.Pane eventKey="second">
+      <Card className="text-center" style={{ width: '32rem' }}>
+      <Card.Img variant="top" src={projImg3} />
+      <Card.ImgOverlay>
+      <Button variant="info"href="https://github.com/Jezebel1990/appBank.git">Saiba mais</Button>
+        {/* <Card.Title>Mobile</Card.Title> */}
+      </Card.ImgOverlay>
+    </Card>
+  </Tab.Pane>
+
+<Tab.Pane eventKey="third">
+<Card className="text-center" style={{ width: '32rem' }}>
+      <Card.Img variant="top" src={projImg4} />
+      <Card.ImgOverlay>
+      <Button variant="info"href="https://docs.google.com/presentation/d/e/2PACX-1vQtaMkZW6Hg8dNqbms4Q69ndvXsf4W6dyLlJ4sSYMGtVMfVEMv16DCmNliSAtrkMguX91kDbKCKYa82/pub?start=false&loop=false&delayms=1000">Saiba mais</Button>
+        {/* <Card.Title>Mobile</Card.Title> */}
+      </Card.ImgOverlay>
+    </Card>
+
+</Tab.Pane>
+</Tab.Content>
+</Tab.Container>
               </div>}
             </TrackVisibility>
           </Col>
