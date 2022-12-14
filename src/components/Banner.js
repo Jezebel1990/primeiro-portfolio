@@ -72,8 +72,8 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Bem vindo(a) ao meu Portfólio</span>
-                <h1>{`Olá! Aqui é a  Jezebel`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Dev Full Stack", "Dev Java Júnior", "UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Olá, me chamo Jezebel. Sou desenvolvedora  Full Stack Web Java Junior e aprendiz de UX design. Acredito que o usuário é o centro de qualquer solução de design de sucesso.</p>
+                <h1>{`Olá! Aqui é a  Jezebel`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Dev FullStack", "Dev Java Júnior", "UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>Olá, me chamo Jezebel. Sou desenvolvedora  FullStack Junior e aprendiz de UX design. Acredito que o usuário é o centro de qualquer solução de design de sucesso.</p>
                   <button onClick={onButtonClick}>Baixar Currículo<ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
