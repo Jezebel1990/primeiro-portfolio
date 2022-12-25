@@ -4,11 +4,13 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/project-img5.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 
 export const Projects = () => {
@@ -90,7 +92,7 @@ export const Projects = () => {
                           })
                         }
                       </Row>
-                    </Tab.Pane>
+                   </Tab.Pane>
       <Tab.Pane eventKey="second">
       <Card className="text-center" style={{ width: '32rem' }}>
       <Card.Img variant="top" src={projImg3} />
@@ -102,6 +104,7 @@ export const Projects = () => {
   </Tab.Pane>
 
 <Tab.Pane eventKey="third">
+<CardGroup>
 <Card className="text-center" style={{ width: '32rem' }}>
       <Card.Img variant="top" src={projImg4} />
       <Card.ImgOverlay>
@@ -109,6 +112,16 @@ export const Projects = () => {
         {/* <Card.Title>Mobile</Card.Title> */}
       </Card.ImgOverlay>
     </Card>
+ 
+    <Card className="text-center" style={{ width: '32rem' }}>
+      <Card.Img variant="top" src={projImg5} />
+      <Card.ImgOverlay>
+      <Button variant="info"href="https://docs.google.com/presentation/d/e/2PACX-1vSBDBLb6gKka_8fEYKGClIry8YUsnZePuIq6WtrsF4RtD-6lpHkGleFCb5qqF3pAA/pub?start=true&loop=false&delayms=3000">Saiba mais</Button>
+        {/* <Card.Title>Mobile</Card.Title> */}
+      </Card.ImgOverlay>
+    </Card>
+    </CardGroup>
+
 
 </Tab.Pane>
 </Tab.Content>
