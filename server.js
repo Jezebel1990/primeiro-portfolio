@@ -52,10 +52,10 @@ router.post("/contact", (req, res) => {
     from: name,
     to: "********@gmail.com",
     subject: "Contact Form Submission - Portfolio",
-    html: `<p>Name: ${name}</p>
+    html: `<p>Nome: ${name}</p>
            <p>Email: ${email}</p>
-           <p>Phone: ${phone}</p>
-           <p>Message: ${message}</p>`,
+           <p>Telefone: ${phone}</p>
+           <p>Mensagem: ${message}</p>`,
   };
   contactEmail.sendMail(mail, (error) => {
     if (error) {

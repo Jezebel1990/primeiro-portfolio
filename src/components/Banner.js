@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.png";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -22,20 +21,6 @@ export const Banner = () => {
 
     return () => { clearInterval(ticker) };
   }, [text])
-
-  const onButtonClick = () => {
-    fetch('Jezebel_Guedes.pdf').then(response => {
-      response.blob().then(blob => {
-          const fileURL = window.URL.createObjectURL(blob);
-        let alink = document.createElement('a');
-        alink.href = fileURL;
-        alink.download = 'Jezebel_Guedes.pdf';
-        alink.click();
-    })
-})
-
-
-  }
 
 
   const tick = () => {
@@ -73,8 +58,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Bem vindo(a) ao meu Portfólio</span>
                 <h1>{`Olá! Aqui é a  Jezebel`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Dev FullStack", "Dev Web Júnior", "UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Olá, me chamo Jezebel. Sou  Desenvolvedora Web e  UX Designer. Acredito que o usuário é o centro de qualquer solução de sucesso.</p>
-                  <button onClick={onButtonClick}>Baixar Currículo<ArrowRightCircle size={25} /></button>
+
               </div>}
             </TrackVisibility>
           </Col>
