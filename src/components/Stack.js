@@ -6,6 +6,7 @@ import meter5 from "../assets/img/meter5.svg";
 import meter6 from "../assets/img/meter6.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import React from 'react';
 
 import colorSharp from "../assets/img/color-sharp.png"
 

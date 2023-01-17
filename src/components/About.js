@@ -78,7 +78,7 @@ export const About = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                <div className="about">
                 <h2>{`Sobre mim`} </h2>
-                  <h5>Olá, me chamo Jezebel. Sou bacharel em Tecnologia da Informação pela Univesp, Desenvolvedora Web e  UX Designer. Acredito que uso de tecnologias centradas no usuário, é a solução para qualquer nível de sucesso.</h5>
+                  <h5>Olá, me chamo Jezebel. Sou bacharel em Tecnologia da Informação pela Univesp, Desenvolvedora Web e UX Designer. Acredito que o uso de tecnologias centradas no usuário, é a solução para qualquer nível de sucesso.</h5>
                   
                   <div className="new-email-bx">
                   <h3><button onClick={onButtonClick}>Baixar Currículo</button></h3>

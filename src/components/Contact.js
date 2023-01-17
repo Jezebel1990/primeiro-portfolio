@@ -1,95 +1,143 @@
 import { useState } from "react";
+import { Slide } from "react-awesome-reveal";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.png";
+import emailjs from "emailjs-com";
 import 'animate.css';
-import TrackVisibility from 'react-on-screen';
-
+import React from 'react';
 export const Contact = () => {
-  const formInitialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: ''
-  }
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Enviar');
-  const [status, setStatus] = useState({});
 
-  const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
-  }
+  const [val, setVal] = useState(("Enviar"));
+  const btn = document.getElementById("button");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit =  (e) => {
     e.preventDefault();
-    setButtonText("Enviando...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Enviar");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ succes: true, message: 'Mensagem enviada com sucesso'});
-    } else {
-      setStatus({ succes: false, message: 'Ops! Algo deu errado, tente novamente mais tarde.'});
-    }
+   setVal(("Enviando"));
+   emailjs
+      .sendForm(
+         "service_p3jpunc",
+         "template_5whufbp",
+         e.target,
+         "dldo5QNKt9BDCl0ro"
+      )
+      .then(() => {
+        setVal(("Enviado"));
+        btn.style.background = "green";
+        clearFields();
+        setTimeout(() => {
+          setVal(("Enviado"));
+          btn.style.background = "white";
+        }, 2000);
+      })
+      .catch((err) => {
+        setTimeout(() => {
+          setVal(("Tente novamente"));
+          btn.style.background = "red";
+        }, 3000);
+      });
   };
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [secName, setSecName] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
+  const clearFields = () => {
+    setFirstName("");
+    setSecName("");
+    setNumber("");
+    setEmail("");
+    setMessage("");
+  };
+
 
   return (
     <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
-              }
-            </TrackVisibility>
+          <Slide direction="left" triggerOnce="true"  >
+            <img className="animate__animated  animate__swing" 
+             src={contactImg} 
+             alt="Contact Us"
+             style={{ transform: "translateX(100px )" }}
+             />
+            </Slide>
           </Col>
           <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <div className="animate__animated animate__backInRight">
                 <h2>Deseja Entrar em Contato?</h2>
+                <Slide direction="right" triggerOnce="true">
                 <form onSubmit={handleSubmit}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.firstName} placeholder="Nome" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+                    <input
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        type="text"
+                        required
+                        placeholder={("Nome")}
+                        name="name"
+                        className="form-int"
+                      />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lastName} placeholder="Sobrenome" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                      <input
+                        value={secName}
+                        onChange={(e) => setSecName(e.target.value)}
+                        type="text"
+                        placeholder={("Sobrenome")}
+                        name="name"
+                        className="form-int"
+                        required
+                      />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="email" value={formDetails.email} placeholder="Email" onChange={(e) => onFormUpdate('email', e.target.value)} />
+                      <input
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        placeholder={("Email")}
+                        name="user_email"
+                        className="form-int"
+                        required
+                      />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="tel" value={formDetails.phone} placeholder="Telefone" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+                      <input
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
+                        type="tel"
+                        placeholder={("Telefone")}
+                        name="phone"
+                        className="form-int"
+                      />
                     </Col>
                     <Col size={12} className="px-1">
-                      <textarea rows="6" value={formDetails.message} placeholder="Mensagem" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                      <button type="submit"><span>{buttonText}</span></button>
+                      <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        rows="6"
+                        placeholder={("Mensagem")}
+                        name="message"
+                      ></textarea>
+                      <input
+                        type="submit"
+                        id="button"
+                        className="submit"
+                        value={val}
+                      />
                     </Col>
-                    {
-                      status.message &&
-                      <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                      </Col>
-                    }
                   </Row>
                 </form>
-              </div>}
-            </TrackVisibility>
+              </Slide>
+            </div>
           </Col>
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};
+
+
+                      
+                   

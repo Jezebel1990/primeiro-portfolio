@@ -1,7 +1,7 @@
 import { Col } from "react-bootstrap";
 import icon1 from "../assets/img/icon1.svg";
 import icon2 from "../assets/img/icon2.svg";
-
+import React from 'react';
 export const ProjectCard = ({ title, description, imgUrl, link1,link2 }) => {
   return (
     <Col size={12} sm={6} md={4}>
