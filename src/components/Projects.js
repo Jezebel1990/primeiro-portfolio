@@ -3,6 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import projImg4 from "../assets/img/project-img4.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -35,11 +36,13 @@ export const Projects = () => {
       link1:"https://github.com/Jezebel1990/appBank.git",
       link2: ""
     },
-    // {
-    //   title: "Mobile App",
-    //   description: "Design & Development",
-    //   imgUrl: projImg1,
-    // },
+    {
+      title: "Gesture Controller",
+      description: "Desenvolvimento",
+      imgUrl: projImg4,
+      link1:"https://github.com/Jezebel1990/javascriptexpert.git",
+      link2: "https://jezebel1990.github.io/javascriptexpert/classes/class04/"
+    },
     // {
     //   title: "Business Startup",
     //   description: "Design & Development",

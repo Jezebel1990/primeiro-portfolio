@@ -15,6 +15,12 @@
 	font-weight: 400;
 }
 
+@font-face {
+  font-family: Sofia;
+  src: url('./assets/font/SofiaSansSemiCondensed-Regular.ttf');
+  font-weight: 200;
+}
+
 /************ Default Css ************/
 * {
   margin: 0;
@@ -563,26 +569,73 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  
 }
-.newsletter-bx {
+
+.footer img {
+  width: 26%;
+  
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+
+
+/************ About Css ************/
+
+.about-bx {
   background: #FFFFFF;
+  background-position: center center;
   border-radius: 55px;
   color: #121212;
   padding: 85px 125px;
   margin-bottom: 80px;
   margin-top: -122px;
+  display: flex;
+  align-items: center;
   
 }
-.newsletter-bx h3 {
+
+
+.about-bx h2 {
+	font-size: 45px;
+	font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  display: block;
+  margin: 20px;
+}
+
+.about-bx h3 {
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2em;
+  display: flex;
 }
+
+
+.about-bx h5 {
+  font-size: 16px;
+  margin: 20px;
+  padding: 10px;
+  font-family: 'Sofia', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .new-email-bx {
   background: #fff;
   padding: 5px;
   border-radius: 20px;
-  position: relative;
+  position: absolute;
   z-index: 0;
   display: flex;
   align-items: center;
@@ -593,6 +646,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #fff;
   border-radius: 20px;
   position: absolute;
+  display: flex;
   z-index: -1;
   top: 0;
   left: 0;
@@ -606,6 +660,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: transparent;
   border: 0;
   padding: 0 15px;
+  display: flex;
 }
 .new-email-bx button {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -618,32 +673,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   
 }
-.about h2 {
-	font-size: 45px;
-	font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1;
-  margin-bottom: 20px;
-  display: block;
-  align-self: center;
-}
 
-.about img {
+.about-bx img {
+  width: auto;
   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
   
-
-.footer img {
-  width: 26%;
-  
-}
-.footer p {
-  font-weight: 400;
-  font-size: 14px;
-  color: #B8B8B8;
-  letter-spacing: 0.5px;
-  margin-top: 20px;
 }

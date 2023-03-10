@@ -64,7 +64,7 @@ export const About = () => {
   return (
     <section className="about" id="about">
     <Col lg={12}>
-    <div className="newsletter-bx wow slideInUp">
+    <div className="about-bx wow slideInUp">
     <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
@@ -92,7 +92,6 @@ export const About = () => {
           </Col>
          
       </div>
-      
           
           </Col>
           </section>
