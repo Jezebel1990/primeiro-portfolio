@@ -20,7 +20,7 @@ export const Footer = () => {
               <a href="https://github.com/Jezebel1990"><img src={navIcon2} alt="Icon" /></a>
               <a href="https://www.instagram.com/notrebell/"><img src={navIcon3} alt="Icon" /></a>
             </div>
-            <p>Copyright 2023. All Rights Reserved</p>
+            <p>Copyright 2023. Todos os direitos reservados.</p>
           </Col>
         </Row>
       </Container>

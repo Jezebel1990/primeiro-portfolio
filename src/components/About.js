@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import 'animate.css';
 import meImg from "../assets/img/meImg.png";
 import TrackVisibility from 'react-on-screen';
@@ -27,7 +27,7 @@ export const About = () => {
           const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement('a');
         alink.href = fileURL;
-        alink.download = 'Jezebel_Guedes.pdf';
+        alink.download = 'Jezebel-Guedes.pdf';
         alink.click();
     })
 })
@@ -63,37 +63,41 @@ export const About = () => {
 
   return (
     <section className="about" id="about">
-    <Col lg={12}>
-    <div className="about-bx wow slideInUp">
+      <Row>
+    <Col xs={12} lg={6}>
+    <div className="about-bx wow slideInUp" style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center"
+                }}>
     <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={meImg} alt="Me Img"/>
-                </div>}
-            </TrackVisibility>  
-     
-          <Col xs={12} md={12} xl={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-               <div className="about">
-                <h2>{`Sobre mim`} </h2>
-                  <h5>Olá, me chamo Jezebel. Sou bacharel em Tecnologia da Informação pela Univesp, Desenvolvedora Web e UX Designer. Acredito que o uso de tecnologias centradas no usuário, é a solução para qualquer nível de sucesso.</h5>
-                  
-                  <div className="new-email-bx">
-                  <h3><button onClick={onButtonClick}>Baixar Currículo</button></h3>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center"
+                }}
+                 
+                >
+                  <img src={meImg} alt="Me Img" className="about-img" style={{ width: "150px"}} />
+                  <h2>{`Sobre mim`} </h2>
+                  <div style={{
+                margin: "-20px 0"
+                }}>
+                  <h5>Olá, me chamo Jezebel. Sou Desenvolvedora Front-end e UX Designer. Acredito que o uso de tecnologias centradas no usuário, é a solução para qualquer nível de sucesso.</h5>
                   </div>
+                  <div className="new-email-bx">
+                  <h5><button onClick={onButtonClick}>Currículo</button></h5>
               </div>
               </div>
               }
             </TrackVisibility>
-            
-         
+          </div>
           </Col>
-         
-      </div>
-          
-          </Col>
+          </Row>
           </section>
   )
    }

@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
+// import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
@@ -17,56 +17,47 @@ export const Projects = () => {
 
 
     {
-      title: "E-commerce Website",
-      description: "Design & Desenvolvimento",
+      title: "E-commerce de camisetas",
+      description: "Desenvolvimento FullStack, realizado em equipe durante o bootcamp Generation.",
       imgUrl: projImg1,
       link1:"https://github.com/LuaBezana/eCommerceGeneration",
-      link2:"https://hw-tshirts.netlify.app"
+      link2:"https://hw-tshirts.netlify.app",
+      stacks: ["Angular", "BootStrap", "Java", "MySQL"]
     },
-    {
-      title: "Rede Social",
-      description: "Design & Desenvolvimento",
-      imgUrl: projImg2,
-      link1:"https://github.com/Jezebel1990/alurakut",
-      link2:"https://alurakut-blond-psi.vercel.app/login"
-    },
+    // {
+    //   title: "Rede Social",
+    //   description: "Design & Desenvolvimento",
+    //   imgUrl: projImg2,
+    //   link1:"https://github.com/Jezebel1990/alurakut",
+    //   link2:"https://alurakut-blond-psi.vercel.app/login",
+    //   stacks: ["React", "BootStrap", "CSS"]
+    // },
     {
       title: "Mobile",
       description: "Design & Desenvolvimento",
       imgUrl: projImg3,
       link1:"https://github.com/Jezebel1990/appBank.git",
-      link2: ""
+      link2: "",
+      stacks: ["Java", "Android", "CSS"]
     },
     {
       title: "Gesture Controller",
       description: "Desenvolvimento",
       imgUrl: projImg4,
       link1:"https://github.com/Jezebel1990/javascriptexpert.git",
-      link2: "https://jezebel1990.github.io/javascriptexpert/classes/class04/"
+      link2: "https://jezebel1990.github.io/javascriptexpert/classes/class04/",
+      stacks: ["JavaScript", "CSS"]
     },
     {
       title: "Mern Social Midia",
-      description: "Design & Desenvolvimento",
+      description: "Desenvolvimento FullStack de rede social com dark mode.",
       imgUrl: projImg5,
       link1:"https://github.com/Jezebel1990/mern-social-media.git",
-      link2: "https://mern-social-media-omega.vercel.app/"
+      link2: "https://mern-social-media-omega.vercel.app/",
+      stacks: ["MongoDB", "Express" ,"React", "Node.js"]
     },
 
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg2,
-    // },
-
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg3,
-    // },
-    
   ];
-
-
 
   
   return (
@@ -103,7 +94,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" alt="" src={colorSharp2}></img>
     </section>
   )
 }
