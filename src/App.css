@@ -313,7 +313,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .stack-bx {
-  background: #151515;
+  background: transparent;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
@@ -346,6 +346,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
+
+@keyframes slide {
+  0% { transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
+.owl-carousel .item {
+  animation: slide 3s linear infinite;
+}
+.owl-carousel .owl-nav {
+  display: none;
+
+}
+
+
 
 /************ Projects Css ************/
 .projects {

@@ -15,7 +15,7 @@ export const Stack = () => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 6
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -39,29 +39,32 @@ export const Stack = () => {
                     <div className="stack-bx wow zoomIn">
                         <h2>Stack</h2>
                         <p>Em desenvolvimento de software,  stack é o conjunto de tecnologias que usamos para criar nossas aplicações. Nesse portfólio, você poderá encontrar as seguintes tecnologias:</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme stack-slider">
-                            <div className="item">
+                        <Carousel 
+                        responsive={responsive} 
+                        infinite={true} 
+                        className="owl-carousel owl-theme stack-slider">
+                            <div className="item animated-item">
                                 <img src={meter1} alt="Image" />
                                 <h5>JavaScript</h5>
                             </div>
-                            <div className="item">
+                            <div className="item animated-item">
                                 <img src={meter2} alt="Image" />
                                 <h5>CSS</h5>
                             </div>
-                            <div className="item">
+                            <div className="item animated-item">
                                 <img src={meter3} alt="Image" />
                                 <h5>HTML</h5>
                             </div>
-                            <div className="item">
+                            <div className="item animated-item">
                                 <img src={meter4} alt="Image" />
                                 <h5>Java</h5>
                             </div>
-                            <div className="item">
+                            <div className="item animated-item">
                                 <img src={meter5} alt="Image" />
                                 <h5>Angular</h5>
                             </div>
 
-                            <div className="item">
+                            <div className="item animated-item">
                                 <img src={meter6} alt="Image" />
                                 <h5>MySQL</h5>
                             </div>
