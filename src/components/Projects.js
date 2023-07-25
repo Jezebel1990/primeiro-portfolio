@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
-// import projImg2 from "../assets/img/project-img2.png";
+import projImg2 from "../assets/img/projImg2.gif";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
@@ -24,14 +24,14 @@ export const Projects = () => {
       link2:"https://hw-tshirts.netlify.app",
       stacks: ["Angular", "BootStrap", "Java", "MySQL"]
     },
-    // {
-    //   title: "Rede Social",
-    //   description: "Design & Desenvolvimento",
-    //   imgUrl: projImg2,
-    //   link1:"https://github.com/Jezebel1990/alurakut",
-    //   link2:"https://alurakut-blond-psi.vercel.app/login",
-    //   stacks: ["React", "BootStrap", "CSS"]
-    // },
+    {
+      title: "Donuts Story",
+      description: "Landing Page com animações em 3D.",
+      imgUrl: projImg2,
+      link1:"https://github.com/Jezebel1990/donuts-story.git",
+      link2:"https://donuts-story.vercel.app/",
+      stacks: ["JavaScript", "Next.js", "Three.js", "SCSS"]
+    },
     {
       title: "Mobile",
       description: "Design & Desenvolvimento",
