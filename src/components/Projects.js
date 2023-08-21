@@ -5,6 +5,9 @@ import projImg2 from "../assets/img/projImg2.gif";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
+import projImg6 from "../assets/img/project-img6.png";
+import projImg7 from "../assets/img/project-img7.png";
+import projImg8 from "../assets/img/project-img8.gif";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -25,7 +28,7 @@ export const Projects = () => {
       stacks: ["Angular", "BootStrap", "Java", "MySQL"]
     },
     {
-      title: "Donuts Story",
+      title: "Loja de Donuts",
       description: "Landing Page com animações em 3D.",
       imgUrl: projImg2,
       link1:"https://github.com/Jezebel1990/donuts-story.git",
@@ -55,6 +58,30 @@ export const Projects = () => {
       link1:"https://github.com/Jezebel1990/mern-social-media.git",
       link2: "https://mern-social-media-omega.vercel.app/",
       stacks: ["MongoDB", "Express" ,"React", "Node.js"]
+    },
+    {
+      title: "NgGame",
+      description: "Website com database de games",
+      imgUrl: projImg6,
+      link1:"https://github.com/Jezebel1990/ng-video-game-db.git",
+      link2: "https://ng-video-game-db-zeta.vercel.app/",
+      stacks: ["Angular", "TypeScript" ,"HTML", "Scss"]
+    },
+    {
+      title: "Receitas Culinárias",
+      description: "App web responsivo para receitas.",
+      imgUrl: projImg7,
+      link1:"https://github.com/Jezebel1990/react-redux-saga-recipe.git",
+      link2: "https://react-redux-saga-recipe.vercel.app/",
+      stacks: ["React", "Redux" ,"Redux-saga", "Material-UI"]
+    },
+    {
+      title: "Destinos de Viagens",
+      description: "Website responsivo para viagens.",
+      imgUrl: projImg8,
+      link1:"https://github.com/Jezebel1990/travel-destinations.git",
+      link2: "https://oval-plstravel.surge.sh/",
+      stacks: ["Gatsby", "React" ,"JavaScript", "GraphQL"]
     },
 
   ];
