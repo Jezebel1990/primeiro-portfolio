@@ -1,4 +1,4 @@
-import { Container, Row, Col, Tab } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav, NavItem  } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/projImg2.gif";
@@ -12,7 +12,8 @@ import projImg9 from "../assets/img/project-img9.gif";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import React from 'react';
+import React, { useState } from 'react';
+
 
 
 export const Projects = () => {
@@ -93,9 +94,15 @@ export const Projects = () => {
       stacks: ["React", "Stripe" ,"Node.js", "Tailwind"]
     },
 
-
   ];
 
+
+
+  const [activeTab, setActiveTab] = useState('first'); // Estado para controlar a guia ativa
+ 
+  const handleTabSelect = (tabKey) => {
+    setActiveTab(tabKey);
+  };
   
   return (
     <section className="projects" id="projects">
@@ -107,23 +114,40 @@ export const Projects = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projetos</h2>
                 <p>Tento constantemente garantir que as decisões de design sejam resultados de um processo centrado no ser humano. Esta é, uma coleção arquivada de projetos selecionados enquanto estava sob processo de aprendizagem.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-               
+                <Tab.Container id="projects-tabs" activeKey={activeTab} onSelect={handleTabSelect}>
+                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                <NavItem>
+                  <Nav.Link eventKey="first">➞</Nav.Link>
+                </NavItem>
+                <NavItem>
+                  <Nav.Link eventKey="second">⬌</Nav.Link>
+                </NavItem>
+                <NavItem>
+                  <Nav.Link eventKey="third">🠔</Nav.Link>
+                </NavItem>
+              </Nav>
+                  <Tab.Content id="slideInUp">
+                  <Tab.Pane eventKey="first">
+                  <Row>
+                    {projects.slice(0, 3).map((project, index) => (
+                      <ProjectCard key={index} {...project} />
+                    ))}
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="second">
+                  <Row>
+                    {projects.slice(3, 6).map((project, index) => (
+                      <ProjectCard key={index} {...project} />
+                    ))}
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="third">
+                  <Row>
+                    {projects.slice(6,9).map((project, index) => (
+                      <ProjectCard key={index} {...project} />
+                    ))}
+                  </Row>
+                </Tab.Pane>
 </Tab.Content>
 </Tab.Container>
               </div>}
