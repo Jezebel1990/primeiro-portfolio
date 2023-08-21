@@ -8,6 +8,7 @@ import projImg5 from "../assets/img/project-img5.png";
 import projImg6 from "../assets/img/project-img6.png";
 import projImg7 from "../assets/img/project-img7.png";
 import projImg8 from "../assets/img/project-img8.gif";
+import projImg9 from "../assets/img/project-img9.gif";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -83,6 +84,15 @@ export const Projects = () => {
       link2: "https://oval-plstravel.surge.sh/",
       stacks: ["Gatsby", "React" ,"JavaScript", "GraphQL"]
     },
+    {
+      title: "Stripe Pagamentos",
+      description: "Desenvolvimento FullStack de mini E-commerce.",
+      imgUrl: projImg9,
+      link1:"https://github.com/Jezebel1990/stripe-paym-gateway.git",
+      link2: "https://stripe-paym-gateway.vercel.app/",
+      stacks: ["React", "Stripe" ,"Node.js", "Tailwind"]
+    },
+
 
   ];
 
