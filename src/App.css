@@ -381,6 +381,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
+
+
+
+.projects .nav.nav-pills img {
+  width: 7%;
+
+  
+}
 .projects .nav.nav-pills {
   width: 72%;
   margin: 0 auto;

@@ -14,6 +14,9 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import React, { useState } from 'react';
 
+import rightIcon from "../assets/img/right_icon.svg";
+import doubleIcon from "../assets/img/double_icon.svg";
+import leftIcon from "../assets/img/left_icon.svg";
 
 
 export const Projects = () => {
@@ -117,13 +120,13 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" activeKey={activeTab} onSelect={handleTabSelect}>
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <NavItem>
-                  <Nav.Link eventKey="first">➞</Nav.Link>
+                  <Nav.Link eventKey="first"> <img src={rightIcon} alt="icon" /></Nav.Link>
                 </NavItem>
                 <NavItem>
-                  <Nav.Link eventKey="second">⬌</Nav.Link>
+                  <Nav.Link eventKey="second"><img src={doubleIcon} alt="icon" /></Nav.Link>
                 </NavItem>
                 <NavItem>
-                  <Nav.Link eventKey="third">🠔</Nav.Link>
+                  <Nav.Link eventKey="third"><img src={leftIcon} alt="icon" /></Nav.Link>
                 </NavItem>
               </Nav>
                   <Tab.Content id="slideInUp">
