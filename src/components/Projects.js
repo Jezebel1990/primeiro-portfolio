@@ -9,6 +9,7 @@ import projImg6 from "../assets/img/project-img6.png";
 import projImg7 from "../assets/img/project-img7.png";
 import projImg8 from "../assets/img/project-img8.gif";
 import projImg9 from "../assets/img/project-img9.gif";
+import projImg10 from "../assets/img/project-img10.gif";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -37,14 +38,14 @@ export const Projects = () => {
       link2:"https://donuts-story.vercel.app/",
       stacks: ["JavaScript", "Next.js", "Three.js", "SCSS"]
     },
-    {
-      title: "Mobile",
-      description: "Design & Desenvolvimento",
-      imgUrl: projImg3,
-      link1:"https://github.com/Jezebel1990/appBank.git",
-      link2: "",
-      stacks: ["Java", "Android", "CSS"]
-    },
+    // {
+    //   title: "Mobile",
+    //   description: "Design & Desenvolvimento",
+    //   imgUrl: projImg3,
+    //   link1:"https://github.com/Jezebel1990/appBank.git",
+    //   link2: "",
+    //   stacks: ["Java", "Android", "CSS"]
+    // },
     {
       title: "Gesture Controller",
       description: "Desenvolvimento",
@@ -93,7 +94,14 @@ export const Projects = () => {
       link2: "https://stripe-paym-gateway.vercel.app/",
       stacks: ["React", "Stripe" ,"Node.js", "Tailwind"]
     },
-
+    {
+      title: "Ecommerce shop",
+      description: "Desenvolvimento Front-end",
+      imgUrl: projImg10,
+      link1:"https://github.com/Jezebel1990/ecommerce-shop.git",
+      link2: "https://ecommerce-shop-silk.vercel.app/",
+      stacks: ["React", "Tailwind", "JavaScript"]
+    },
   ];
 
 

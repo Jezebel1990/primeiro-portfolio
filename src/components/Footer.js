@@ -6,6 +6,7 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import React from 'react';
 export const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <Container>
@@ -20,7 +21,7 @@ export const Footer = () => {
               <a href="https://github.com/Jezebel1990"><img src={navIcon2} alt="Icon" /></a>
               <a href="https://www.instagram.com/notrebell/"><img src={navIcon3} alt="Icon" /></a>
             </div>
-            <p>Copyright 2023. Todos os direitos reservados.</p>
+            <p>Copyright ⓒ {year}. Todos os direitos reservados.</p>
           </Col>
         </Row>
       </Container>
