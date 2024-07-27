@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav, NavItem  } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/projImg2.gif";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg3 from "../assets/img/project-img3.gif";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
 import projImg6 from "../assets/img/project-img6.png";
@@ -10,6 +10,7 @@ import projImg7 from "../assets/img/project-img7.png";
 import projImg8 from "../assets/img/project-img8.gif";
 import projImg9 from "../assets/img/project-img9.gif";
 import projImg10 from "../assets/img/project-img10.gif";
+import projImg11 from "../assets/img/project-img11.gif";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -38,17 +39,17 @@ export const Projects = () => {
       link2:"https://donuts-story.vercel.app/",
       stacks: ["JavaScript", "Next.js", "Three.js", "SCSS"]
     },
-    // {
-    //   title: "Mobile",
-    //   description: "Design & Desenvolvimento",
-    //   imgUrl: projImg3,
-    //   link1:"https://github.com/Jezebel1990/appBank.git",
-    //   link2: "",
-    //   stacks: ["Java", "Android", "CSS"]
-    // },
+    {
+      title: "Metaversos",
+      description: "Website com experiência interativa.",
+      imgUrl: projImg3,
+      link1:"https://github.com/Jezebel1990/metaverse.git",
+      link2: "https://metaverso-sideral.netlify.app/",
+      stacks: ["Next.js", "TypeScript", "Tailwind", "motion"]
+    },
     {
       title: "Gesture Controller",
-      description: "Desenvolvimento",
+      description: "Website controlado por gestos.",
       imgUrl: projImg4,
       link1:"https://github.com/Jezebel1990/javascriptexpert.git",
       link2: "https://jezebel1990.github.io/javascriptexpert/classes/class04/",
@@ -96,11 +97,19 @@ export const Projects = () => {
     },
     {
       title: "Ecommerce shop",
-      description: "Desenvolvimento Front-end",
+      description: "Desenvolvimento Front-end, com implementação de api",
       imgUrl: projImg10,
       link1:"https://github.com/Jezebel1990/ecommerce-shop.git",
       link2: "https://ecommerce-shop-silk.vercel.app/",
       stacks: ["React", "Tailwind", "JavaScript"]
+    },
+    {
+      title: "Bank NextJs",
+      description: "Landing Page de banco.",
+      imgUrl: projImg11,
+      link1:"https://github.com/Jezebel1990/bank-nextjs.git",
+      link2: "https://bank-nextjs-three.vercel.app/",
+      stacks: ["Next.js", "Tailwind"]
     },
   ];
 
@@ -131,8 +140,9 @@ export const Projects = () => {
                   <Nav.Link eventKey="second">4 - 6</Nav.Link>
                 </NavItem>
                 <NavItem>
-                  <Nav.Link eventKey="third">7 - 9</Nav.Link>
+                  <Nav.Link eventKey="third">7 - 12</Nav.Link>
                 </NavItem>
+                
               </Nav>
                   <Tab.Content id="slideInUp">
                   <Tab.Pane eventKey="first">
@@ -151,7 +161,7 @@ export const Projects = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <Row>
-                    {projects.slice(6,9).map((project, index) => (
+                    {projects.slice(6,12).map((project, index) => (
                       <ProjectCard key={index} {...project} />
                     ))}
                   </Row>
