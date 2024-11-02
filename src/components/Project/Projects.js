@@ -123,14 +123,13 @@ export const Projects = () => {
       link2: "https://next-cartoon-network.vercel.app/",
       stacks: ["Next.js", "Tailwind", "Framer Motion"]
     },
-
     {
-      title: "MagicAI",
-      description: "App de IA que transforma desenhos no canvas em imagens.",
+      title: "My Trips",
+      description: "Um site para mostrar lugares visitados.",
       imgUrl: projImg13,
-      link1:"https://github.com/Jezebel1990/generate-images.git",
-      link2: "https://magicai-generate.netlify.app/",
-      stacks: ["Next.js", "Convex", "Replicate"]
+      link1:"https://github.com/Jezebel1990/my-trips.git",
+      link2: "https://my-trips-notrebell.netlify.app/",
+      stacks: ["Next.js", "Styled Components", "Leaflet"]
     },
     {
       title: "Blog React",
