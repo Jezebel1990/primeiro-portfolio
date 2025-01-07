@@ -15,6 +15,7 @@ import projImg12 from "../../assets/img/project-img12.gif";
 import projImg13 from "../../assets/img/project-img13.png";
 import projImg14 from "../../assets/img/project-img14.png";
 import projImg15 from "../../assets/img/project-img15.gif";
+import projImg16 from "../../assets/img/project-img16.gif";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -146,6 +147,14 @@ export const Projects = () => {
       link1:"https://github.com/Jezebel1990/quiz-app.git",
       link2: "https://steady-dusk-946a34.netlify.app/",
       stacks: ["Next.js", "Tailwind", "Express.js"]
+    },
+    {
+      title: "Marvel",
+      description: "SPA que usa a API da Marvel para listar, buscar, filtrar e favoritar personagens.",
+      imgUrl: projImg16,
+      link1:"https://github.com/Jezebel1990/comic-characters.git",
+      link2: "https://comic-characters.vercel.app/",
+      stacks: ["React.js", "CSS", "Jest"]
     },
   ];
 
