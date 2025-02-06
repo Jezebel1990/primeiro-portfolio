@@ -16,6 +16,8 @@ import projImg13 from "../../assets/img/project-img13.png";
 import projImg14 from "../../assets/img/project-img14.png";
 import projImg15 from "../../assets/img/project-img15.gif";
 import projImg16 from "../../assets/img/project-img16.gif";
+import projImg17 from "../../assets/img/project-img17.gif";
+import projImg18 from "../../assets/img/project-img18.gif";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -150,13 +152,30 @@ export const Projects = () => {
     },
     {
       title: "Marvel",
-      description: "SPA que usa a API da Marvel para listar, buscar, filtrar e favoritar personagens.",
+      description: "SPA que usa a API da Marvel para buscar, filtrar e favoritar personagens.",
       imgUrl: projImg16,
       link1:"https://github.com/Jezebel1990/comic-characters.git",
       link2: "https://comic-characters.vercel.app/",
       stacks: ["React.js", "CSS", "Jest"]
     },
+      {
+      title: "Cão Sem Dono",
+      description: "Aplicação web dedicada à causa dos animais abandonados, promovendo doações via Pix.",
+      imgUrl: projImg17,
+      link1:"https://github.com/Jezebel1990/nextjs-charity.git",
+      link2: "https://caosemdono.vercel.app/",
+      stacks: ["Next.js", "Chakra UI", "TypeScript"]
+    },
+    {
+      title: "GEN Ai",
+      description: "Aplicativo web desenvolvido para gerar resumos de texto e PDF de maneira simples.",
+      imgUrl: projImg18,
+      link1:"https://github.com/Jezebel1990/summerizer-react.git",
+      link2: "https://summerizer-react.vercel.app/",
+      stacks: ["React.js", "Tailwind CSS", "IA Hugging Face"]
+    },
   ];
+
 
 
 
@@ -185,7 +204,7 @@ export const Projects = () => {
                   <Nav.Link eventKey="second">7 - 12</Nav.Link>
                 </NavItem>
                 <NavItem>
-                  <Nav.Link eventKey="third">13 - 16</Nav.Link>
+                  <Nav.Link eventKey="third">13 - 18</Nav.Link>
                 </NavItem>
                 
               </Nav>
@@ -206,7 +225,7 @@ export const Projects = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <Row>
-                    {projects.slice(12, 16).map((project, index) => (
+                    {projects.slice(12, 18).map((project, index) => (
                       <ProjectCard key={index} {...project} />
                     ))}
                   </Row>
