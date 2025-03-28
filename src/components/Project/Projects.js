@@ -1,4 +1,6 @@
 import { Container, Row, Col, Tab, Nav, NavItem  } from "react-bootstrap";
+import { FaArrowRightArrowLeft, FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../../assets/img/project-img1.png";
 import projImg2 from "../../assets/img/projImg2.gif";
@@ -18,6 +20,7 @@ import projImg15 from "../../assets/img/project-img15.gif";
 import projImg16 from "../../assets/img/project-img16.gif";
 import projImg17 from "../../assets/img/project-img17.gif";
 import projImg18 from "../../assets/img/project-img18.gif";
+import projImg19 from "../../assets/img/project-img19.gif";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -46,14 +49,16 @@ export const Projects = () => {
       link2:"https://donuts-story.vercel.app/",
       stacks: ["Next.js", "Three.js", "SCSS"]
     },
+    
     {
-      title: "Metaversos",
-      description: "Website com experiência interativa.",
-      imgUrl: projImg3,
-      link1:"https://github.com/Jezebel1990/metaverse.git",
-      link2: "https://metaverso-sideral.netlify.app/",
-      stacks: ["Next.js", "Tailwind", "motion"]
+      title: "Quiz App",
+      description: "Quiz com escolha de nível: fácil, médio ou difícil.",
+      imgUrl: projImg15,
+      link1:"https://github.com/Jezebel1990/quiz-app.git",
+      link2: "https://steady-dusk-946a34.netlify.app/",
+      stacks: ["Next.js", "Tailwind", "Express.js"]
     },
+
     {
       title: "Gesture Controller",
       description: "Website controlado por gestos.",
@@ -142,13 +147,14 @@ export const Projects = () => {
       link2: "https://blog-react-three-iota.vercel.app/",
       stacks: ["React.js", "JavaScript", "SASS"]
     },
+   
     {
-      title: "Quiz App",
-      description: "Quiz com escolha de nível: fácil, médio ou difícil.",
-      imgUrl: projImg15,
-      link1:"https://github.com/Jezebel1990/quiz-app.git",
-      link2: "https://steady-dusk-946a34.netlify.app/",
-      stacks: ["Next.js", "Tailwind", "Express.js"]
+      title: "Metaversos",
+      description: "Website com experiência interativa.",
+      imgUrl: projImg3,
+      link1:"https://github.com/Jezebel1990/metaverse.git",
+      link2: "https://metaverso-sideral.netlify.app/",
+      stacks: ["Next.js", "Tailwind", "motion"]
     },
     {
       title: "Marvel",
@@ -174,9 +180,15 @@ export const Projects = () => {
       link2: "https://summerizer-react.vercel.app/",
       stacks: ["React.js", "Tailwind CSS", "IA Hugging Face"]
     },
+    {
+      title: "K-Drama",
+      description: "Site informativo sobre doramas coreanos, com destaques e detalhes de cada drama.",
+      imgUrl: projImg19,
+      link1:"https://github.com/Jezebel1990/k-drama-nuxtjs.git",
+      link2: "https://k-drama-nuxtjs.vercel.app/",
+      stacks: ["Vue.js 3", "Nuxt.js", "Tailwind CSS"]
+    },
   ];
-
-
 
 
   const [activeTab, setActiveTab] = useState('first'); // Estado para controlar a guia ativa
@@ -198,20 +210,26 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" activeKey={activeTab} onSelect={handleTabSelect}>
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <NavItem>
-                  <Nav.Link eventKey="first">1 - 6</Nav.Link>
+                  <Nav.Link eventKey="first">
+                  <FaArrowRight />
+                    </Nav.Link>
                 </NavItem>
                 <NavItem>
-                  <Nav.Link eventKey="second">7 - 12</Nav.Link>
+                  <Nav.Link eventKey="second">
+                  <FaArrowRightArrowLeft />
+                    </Nav.Link>
                 </NavItem>
                 <NavItem>
-                  <Nav.Link eventKey="third">13 - 18</Nav.Link>
+                  <Nav.Link eventKey="third">
+                  <FaArrowLeft />
+                    </Nav.Link>
                 </NavItem>
                 
               </Nav>
                   <Tab.Content id="slideInUp">
                   <Tab.Pane eventKey="first">
                   <Row>
-                    {projects.slice(0, 6).map((project, index) => (
+                    {projects.slice(12, 19).map((project, index) => (
                       <ProjectCard key={index} {...project} />
                     ))}
                   </Row>
@@ -225,7 +243,7 @@ export const Projects = () => {
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
                   <Row>
-                    {projects.slice(12, 18).map((project, index) => (
+                    {projects.slice(0, 6).map((project, index) => (
                       <ProjectCard key={index} {...project} />
                     ))}
                   </Row>

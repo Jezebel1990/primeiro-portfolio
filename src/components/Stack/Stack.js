@@ -2,9 +2,9 @@ import meter1 from "../../assets/img/meter1.svg";
 import meter2 from "../../assets/img/meter2.svg";
 import meter3 from "../../assets/img/meter3.svg";
 import meter5 from "../../assets/img/meter5.svg";
-import meter6 from "../../assets/img/meter6.svg";
 import meter7 from "../../assets/img/meter7.svg";
 import meter8 from "../../assets/img/meter8.svg";
+import meter9 from "../../assets/img/meter9.svg";
 import stack1 from "../../assets/img/stack1.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -67,11 +67,6 @@ export const Stack = () => {
                             </div>
 
                             <div className="item animated-item">
-                                <img src={meter6} alt="Image" />
-                                <h5>MySQL</h5>
-                            </div>
-
-                            <div className="item animated-item">
                                 <img src={meter7} alt="Image" />
                                 <h5>React</h5>
                             </div>
@@ -81,6 +76,10 @@ export const Stack = () => {
                                 <h5>Node.js</h5>
                             </div>
 
+                            <div className="item animated-item">
+                                <img src={meter9} alt="Image" />
+                                <h5>Vue.js</h5>
+                            </div>
                         </Carousel>
                     </div>
                 </div>
