@@ -17,19 +17,19 @@ export const Stack = () => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 6
+      items: 8
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3
+      items: 6
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 4
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 1.5
     }
   };
 
@@ -44,6 +44,10 @@ export const Stack = () => {
                         <Carousel 
                         responsive={responsive} 
                         infinite={true} 
+                        autoPlay={true} // Ativa a rotação automática
+                        autoPlaySpeed={2000} 
+                        keyBoardControl={true} // Permite controle pelo teclado
+                        removeArrowOnDeviceType={["tablet", "mobile"]} 
                         className="owl-carousel owl-theme stack-slider">
                             <div className="item animated-item">
                                 <img src={meter1} alt="Image" />
