@@ -7,11 +7,21 @@ import React from 'react';
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx" style={{ position: 'relative'}}>
-
-        <img src={imgUrl} alt="Project" />
+        <img 
+         src={imgUrl} 
+         alt="Project"
+          style={{
+            width: "100%",
+            height: "250px",   
+            objectFit: "cover",
+            borderRadius: "10px"
+          }}
+         />
         <div className="proj-txtx" style={{ marginBottom: '10px' }}>
           <h4>{title}</h4>
-          <span>{description}</span>
+         <span style={{ marginLeft: "5px", marginRight: "5px" }}>
+        {description}
+        </span>
           <div className="proj-linkbx">
           </div>
            <div className="social-icon">
