@@ -31,7 +31,8 @@ const selectedRepos = [
   "mickey-mouse",
   "breast-care-ai",
   "ecommerce-shop",
-  "ng-video-game-db"
+  "ng-video-game-db",
+  "elevator-ai-assistant",
 ];
 
 // Função para buscar imagem do README
